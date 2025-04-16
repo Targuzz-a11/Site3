@@ -1,0 +1,1976 @@
+@font-face {
+    font-family: "PoppinsLight";
+    src: url(../fonts/Poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: "PoppinsExtraBold";
+    src: url(../fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "PoppinsBold";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "PoppinsMedium";
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Space Age";
+    src: url(../fonts/Space_Age/space\ age.ttf);
+}
+
+
+:root{
+    --primary_color: #735CFF;
+    /* --bg_color: ; */
+}
+
+@media screen and (min-width: 1000px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+    
+        box-sizing: border-box;
+    }
+    body{
+        width: 1440px;
+        height: 5066px;
+    }
+    
+    header{
+        /* position: fixed; */
+        height: 86px;
+        width: 1440px;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        background-color: #f9fafe;
+    }
+    
+    header .logo{
+        width: 255px;
+        height: 35px;
+        margin-left: 165px;
+        margin-top: 34px;
+        margin-bottom: 17px;
+    }
+    
+    header nav{
+        width: 660px;
+        height: 55px;
+        margin-left: 195px;
+        margin-top: 14px;
+        margin-bottom: 17px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    
+    header nav a {
+        font-family: "PoppinsLight";
+        font-size: 11.22px;
+        color: black;
+        border: 1px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+    
+    header nav .design-btn {
+        font-family: "PoppinsLight";
+        font-size: 14px;
+        color: white;
+        border: 1px solid var(--primary_color);
+        width: 175px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: var(--primary_color);
+    }
+    
+    header .right-sections {
+        width: 65.33px;
+        height: 20px;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 34px;
+    }
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+    }
+    
+    .menu-toggle span {
+        display: block;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #f9f9ff;
+        padding: 60px 20px;
+        transition: right 0.4s ease;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .menu.open {
+        right: 0;
+    }
+
+    .menu a {
+        display: block;
+        margin: 15px 0;
+        font-size: 18px;
+        color: #888;
+        text-decoration: none;
+    }
+
+    .menu a.active {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .btn-purple {
+        margin-top: 40px;
+        background-color: #7b5bfa;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .btn-white {
+        margin-top: 15px;
+        background-color: white;
+        color: #888;
+        padding: 12px 20px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    
+    #dreamWatch {
+        font-family: "Space Age", sans-serif;
+        color: #000;
+        padding: 40px 20px;
+        /* position: relative; */
+        overflow: hidden;
+    }
+    
+    #dreamWatch .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        position: relative;
+    }
+    
+    #dreamWatch .Follow {
+        width: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        /* position: absolute; */
+    }
+    
+    #dreamWatch .Follow .icons {
+        width: 33px;
+        height: 33px;
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #dreamWatch .Follow .icons img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #dreamWatch .Follow h4 {
+        font-size: 12px;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        margin: 40px 0;
+        width: 100px;
+    }
+
+    .watch-image-mobilka {
+        display: none;
+    }
+
+    .imgCenter-mobilka{
+        display: none;
+    }
+
+    #dreamWatch .main-content {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    #dreamWatch .mainText h1 {
+        font-size: 60px;
+        line-height: 1.1;
+        margin: 30px 0 30px 0;
+        letter-spacing: 1px;
+    }
+    
+    #dreamWatch h3 {
+        font-family: "PoppinsLight", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 500px;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+    
+    #dreamWatch .design-btn {
+        width: 208px;
+        height: 55px;
+        background-color: var(--primary_color);
+        color: white;
+        border-radius: 5px;
+        border: none;
+        font-family: "PoppinsLight", sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    #dreamWatch .img .content-wrapper{
+        width: 1096px;
+        height: 524px;
+        display: flex;
+        justify-items: left;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .watch-image {
+        position: absolute;
+        /* right: 0;
+        top: 0; */
+        width: 1096px;
+        height: 524px;
+        /* background-image: url('../img/mainPhoto.png'); */
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* background-position: right center; */
+        z-index: 1;
+        margin-top: -265px;
+        /* margin-bottom: 89px; */
+        margin-left: 536px;
+    }
+    
+    .imgDreamWatch{
+        width: 1440px;
+        height: 707px;
+        background-color: #f9fafe;
+        position: relative;
+    }
+    
+    #fucher {
+        padding: 40px 20px;
+        position: relative;
+        overflow: hidden;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 89px;
+    }
+    
+    #fucher .contaner h1 {
+        width: 295px;
+        height: 25px;
+        font-family: "Space Age", sans-serif;
+        font-size: 42px;
+        color: black;
+        margin: 0 auto 40px;
+        text-align: center;
+    }
+    
+    #fucher .imgCenter img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+        width: 632px;
+        height: 629px;
+    }
+    
+    #fucher .contaner .textLeftTop h2,
+    #fucher .contaner .textLeftDown h2,
+    #fucher .contaner .textRightCenter h2 {
+        font-size: 18px;
+        font-family: "PoppinsMedium", sans-serif;
+        margin-bottom: 15px;
+    }
+    
+    #fucher .contaner .textLeftTop {
+        width: 250px;
+        margin-left: 50px;
+        margin-top: 100px;
+        position: relative;
+    }
+
+    #fucher .contaner .textLeftTop .img {
+        display: none;
+    }
+    
+    #fucher .contaner .textLeftDown {
+        width: 280px;
+        margin-top: 240px;
+        margin-left: 50px;
+        position: relative;
+    }
+    
+    #fucher .contaner .textLeftDown .img {
+        display: none;
+    }
+
+    #fucher .contaner .textRightCenter {
+        width: 280px;
+        position: absolute;
+        right: 20px;
+        top: 260px;
+    }
+    
+    #fucher .contaner .textRightCenter .img {
+        display: none;
+    }
+
+    #fucher ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-family: "PoppinsRegular", sans-serif;
+        margin-bottom: 15px;
+    }
+    
+    #fucher ul li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    #DesignYourWatchP {
+        width: 1440px;
+        height: 506px;
+        background-color: var(--primary_color);
+        margin-top: 70px;
+    }
+    
+    #DesignYourWatchB {
+        width: 1440px;
+        height: 668px;
+        background-color: black;
+    }
+    
+    
+    #DesignYourWatchP img{
+        margin-left: 676px;
+        margin-right: 676px;
+        margin-top: -10px;
+    }
+    
+    #DesignYourWatchP h1{
+        font-family: "Space Age", sans-serif;
+        font-size: 42px;
+        margin-left: 435px;
+        margin-top: 56px;
+        color: white;
+        font-weight: normal;
+    }
+    
+    .rangle {
+        font-family: "Space Age", sans-serif;
+        font-size: 32px;
+        width: 60px;
+        height: 60px;
+        color: white;
+        border: 1px solid white;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rangl {
+        padding: 10px 10px;
+        width: 86px;
+        height: 86px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .squear {
+        border-bottom: 1px solid white;
+        width: 154px;
+        height: 55px;
+        margin-left: -13px;
+        margin-right: -13px;
+        margin-top: -12px;
+    }
+    .elements {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        margin-top: 61px;
+    } 
+    .textForElements {
+        width: 716px;
+        height: 24px;
+        margin-left: 365px;
+        margin-right: 359px;
+        margin-top: 18.45px;
+        display: flex;
+        gap: 149px;
+    }
+    
+    .textForElements .text{
+        font-size: 12px;
+        font-family: "PoppinsRegular";
+        color: white;
+    }
+    .baton{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 78px;
+    }
+    .design-btnw{
+        font-family: "PoppinsRegular";
+        font-size: 14px;
+        color: white;
+        border: 1px solid black;
+        width: 208px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #DesignYourWatchMain .ygol img{
+     margin-left: 1340px;
+    
+    }
+    
+    .shape3 {
+        width: 977px;
+        height: 100px;
+        background: var(--primary_color);
+        margin-left: 1390px;
+        transform: perspective(120px) rotateX(-15deg);
+    }
+    
+    .shape {
+        width: 977px;
+        height: 110px;
+        background: white;
+        margin-top: 480px ;
+        margin-right: 620px;
+        transform: perspective(120px) rotateX(-15deg);
+    
+      }
+    .shape1 {
+        margin-top: -566px ;
+        margin-right: 620px;
+        transform: rotate(180deg);
+    }
+    
+    #DesignYourWatchB h1{
+        font-family: "Space Age";
+        font-size: 42px;
+        color: white;
+    }
+    #DesignYourWatchB h3{
+        width: 406px;
+        height: 196px;
+        color: white;
+        font-size: 14px;
+        font-family: "PoppinsRegular";
+        font-weight: normal;
+    }
+    
+    #DesignYourWatchB .ContanerText{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        margin-right: 260px;
+    }
+    
+    #DesignYourWatchB .design-btnww{
+        font-family: "PoppinsLight";
+        font-size: 14px;
+        color: white;
+        border: 1px solid var(--primary_color);
+        width: 208px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: var(--primary_color);
+    }
+    
+    #DesignYourWatchB .imgWoman img {
+        width: 497px;
+        height: 667px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -392px;
+    }
+    #watchesSections .textContent {
+        margin-top: 61px;
+        margin-left: 165px
+    }
+    
+    #watchesSections .textContent h1 {
+        width: 311px;
+        height: 24px;
+        font-family: "Space Age", sans-serif;
+        font-size: 42px;
+        color: black;
+        font-weight: normal;
+    }
+    
+    #watchesSections .textContent h3 {
+        margin-top: 37px;
+        font-family: "PoppinsRegular", sans-serif;
+        font-size: 14px;
+        width: 689px;
+        height: 84px;
+        font-weight: normal;
+        color: #939393;
+    }
+    
+    
+    #watchesSections  .swiper-slide {
+        width: 333px;
+        height: 550px;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        align-items: center;
+        padding-top: 45px;
+        min-width: 100px;
+        transition: opacity 0.5s ease;
+        margin-right: 39px;
+      }
+    
+    #watchesSections .swiper-slide img {
+        border-radius: 10px;
+        display: block;
+        width: 334px;
+        height: 392px;
+        object-fit: cover;
+    }
+    
+    #watchesSections .swiper-wrapper{
+        display: flex;
+        overflow: hidden;
+    }
+    
+    #watchesSections .swiper-wrapper .text{
+        width: 130px;
+        height: 57.14px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        margin-left: 100px;
+    }
+    
+    #watchesSections .swiper-wrapper .text h2{
+    
+        font-family: "PoppinsRegular";
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 96%;
+        color: #000;
+        margin-top: 23.14px;
+    }
+    
+    #watchesSections .swiper-wrapper .text h3{
+        width: 130px;
+        height: 20px;
+        font-family: "PoppinsRegular";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 75%;
+        color: #939393;
+        margin-top: 26.18px;
+    }
+    
+    .hidden{
+        display: none;
+    }
+    .Arrows{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 118px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .ArrowsLeft{
+        cursor: pointer;
+        
+    }
+    
+    .ArrowsRight{
+        margin-left: 137px;
+        cursor: pointer;
+    }
+    
+    #watchesSections .design-btn{
+        font-family: "PoppinsLight";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 86%;
+        color: #fff;
+        border: 1px solid var(--primary_color);
+        width: 208px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: var(--primary_color);
+        margin-left: 604px;
+    }
+    
+    #AboutUs .MainContent {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 225px;
+        margin-left: 100px;
+        width: 1500px;
+        height: 479px;
+    }
+    
+    #AboutUs .MainContent .images {
+        width: 630px;
+        height: 472px;
+        margin-right: 160px;
+    }
+    
+    #AboutUs .MainContent .textAndDiscriptions {
+       margin-top: 70px;
+       margin-left: 75px;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+    
+    #AboutUs .MainContent .textAndDiscriptions h1 {
+        width: 318px;
+        height: 24px;
+        font-family: "Space Age";
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 60%;
+        color: #000;
+    }
+    
+    #AboutUs .MainContent .textAndDiscriptions h3 {
+        width: 396px;
+        height: 194px;
+        font-family: "PoppinsRegular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        color: #939393;
+        margin-top: 47px;
+    }
+    
+    #Logining {
+        width: 1440px;
+        height: 442px;
+        background-image: url("../img/BackGrounds.svg");
+        background-repeat: no-repeat;
+    }
+    
+    #Logining .maincontents .TitleAndDiscript {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #Logining .maincontents .WindowLogining .inputs  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #Logining .maincontents .WindowLogining .inputs input {
+        margin: 9.5px;
+        border-radius: 5px;
+        width: 319px;
+        height: 55px;
+        border: 1px solid white;
+        padding-left: 29px;
+        padding-top: 22px ;
+        padding-bottom: 22px ;
+    }
+    
+    #Logining .maincontents .TitleAndDiscript h1{
+        width: 846px;
+        height: 81px;
+        font-family: "PoppinsBold" ;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 125%;
+        text-transform: capitalize;
+        text-align: center;
+        color: #fff;
+        margin-top: 68px;
+    }
+    
+    #Logining .maincontents .TitleAndDiscript h3  {
+        width: 726px;
+        height: 56px;
+        margin-top: 35px;
+        font-family: "PoppinsRegular" ;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        color: #fff;
+    }
+    
+    #Logining .WindowLogining .SignUp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    #Logining .WindowLogining .SignUp .SignUp-btn {
+        font-family: "PoppinsRegular";
+        font-size: 14px;
+        color: white;
+        border: 1px solid black;
+        width: 160px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: black;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 86%;
+        margin-top: 20px;
+    }
+    
+    #Logining .WindowLogining .comments {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-family: "PoppinsRegular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 86%;
+        margin-top: 22px;
+    }
+    
+    footer .maincont {
+        width: 1440px;
+        height: 160px;
+        align-items: center;
+        margin-top: 89px;
+    }
+    
+    footer .maincont .ImgFootr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    footer .maincont .textFooter {
+        width: 1440px;
+        height: 50px;
+        font-family: "PopinsRegular";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        color: #939393;
+        background-color: #F9FAFE;
+        margin-top: 62.41px;
+    }
+    
+    footer .maincont .textFooter p{
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+        
+}
+@media screen and (max-width: 1000px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+    
+        box-sizing: border-box;
+    }
+    body{
+        /* width: 428px; */
+        height: 6286px;
+    }
+    .menu-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 1001;
+        display: block;
+        }
+        
+    .menu-toggle span {
+        display: block;
+        height: 3px;
+        background-color: #735cff;
+        margin: 5px 0;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: #735cff;
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #735cff;
+    }
+
+    .menu {
+        position: fixed;
+        top: 2%;
+        display: none;
+        width: 420px;
+        height: 750px;
+        background-color: #f9f9ff;
+        padding: 60px 40px;
+        transition: right 0.4s ease;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .menu.open {
+        display: block;
+    }
+
+    .menu a {
+        display: block;
+        margin: 50px;
+        text-decoration: none;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 86%;
+        text-transform: capitalize;
+        color: #939393;
+    }
+
+    .menu a img{
+        margin-right: 15px;
+    }
+
+    .menu a.active {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .btn-purple {
+        width: 208px;
+        height: 55px;
+        margin-top: 40px;
+        background-color: #7b5bfa;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: "PoppinsLight";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 86%;
+    }
+
+    .btn-white {
+        width: 208px;
+        height: 55px;
+        margin-top: 24px;
+        background-color: white;
+        padding: 12px 20px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: "PoppinsLight";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 86%;
+        color: #939393;
+    }
+    .Main{
+        width: auto;
+       display: flex;
+       justify-content: center; 
+       flex-wrap: wrap;
+    }
+    header{
+        /* position: fixed; */
+        height: 86px;
+        width: 1440px;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        background-color: #f9fafe;
+    }
+
+    .imgCenter-mobilka img{
+        width: 365px;
+        height: 365px;
+    }
+    
+    .imgCenter-mobilka{
+        width: 365px;
+        height: 365px;
+    }
+
+    header .logo{
+        margin-left: 20px;
+        margin-top: 15px;
+        /* margin-bottom: 17px; */
+    }
+    header .logo img{
+        width: 161px;
+        height: 20px;
+        
+    } 
+    
+    header nav{
+        width: 660px;
+        height: 55px;
+        margin-left: 195px;
+        margin-top: 14px;
+        margin-bottom: 17px;
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    
+    header nav a {
+        font-family: "PoppinsLight";
+        font-size: 11.22px;
+        color: black;
+        border: 1px;
+        display: none;
+        justify-content: center;
+        text-decoration: none;
+    }
+    
+    header nav .design-btn {
+        font-family: "PoppinsLight";
+        font-size: 14px;
+        color: white;
+        border: 1px solid var(--primary_color);
+        width: 175px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: var(--primary_color);
+    }
+    
+    header .right-sections {
+        display: none;
+        width: 65.33px;
+        height: 20px;
+    }
+    
+    
+    #dreamWatch {
+        font-family: "Space Age", sans-serif;
+        color: #000;
+        padding: 40px 20px;
+        /* position: relative; */
+        overflow: hidden;
+    }
+    
+    #dreamWatch .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        position: relative;
+        flex-direction: column-reverse;
+    }
+    
+    #dreamWatch .Follow {
+        width: 160px;
+        height: 56px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        /* position: absolute; */
+        margin-left: 134px;
+        margin-right: 134px;
+        margin-top: 30px;
+    }
+    
+    #dreamWatch .Follow .icons {
+        width: 33px;
+        height: 33px;
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    #dreamWatch .Follow .icons img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #dreamWatch .Follow h4 {
+        height: 11px;
+        font-size: 12px;
+        /* transform: rotate(-90deg); */
+        white-space: nowrap;
+        /* margin: 40px 0; */
+        width: 160px;
+        margin-left: -150px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 86%;
+        letter-spacing: 0.44em;
+        color: #000;
+    }
+
+    
+    #dreamWatch .main-content {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 20px;
+        /* margin-right: 20px; */
+    }
+    
+    #dreamWatch .mainText h1 {
+        display: flex;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 125%;
+        text-align: center;
+        color: #000;
+    }
+    
+    #dreamWatch h3 {
+        width: 388px;
+        height: 74px;
+        font-family: "PoppinsLight", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        text-align: center;
+        color: #939393;
+        margin-top: 30px;
+    }
+    
+    #dreamWatch .design-btn {
+        margin-left: 90px;
+        margin-top: 40px;
+        width: 208px;
+        height: 55px;
+        background-color: var(--primary_color);
+        color: white;
+        border-radius: 5px;
+        border: none;
+        font-family: "PoppinsLight", sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    #dreamWatch .img .content-wrapper{
+        width: 1096px;
+        height: 524px;
+        display: flex;
+        justify-items: left;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .watch-image-mobilka{
+        margin-top: 39px;
+    }
+
+    .imgCenter {
+        display: none;
+    }
+
+    .watch-image {
+        display: none;
+        position: absolute;
+        /* right: 0;
+        top: 0; */
+        width: 1096px;
+        height: 524px;
+        /* background-image: url('../img/mainPhoto.png'); */
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* background-position: right center; */
+        z-index: 1;
+        /* margin-top: -265px; */
+        /* margin-bottom: 89px; */
+        /* margin-left: 536px; */
+        
+    }
+    .watch-image img{
+        width: 427px;
+        height: 334px;
+    }
+    .imgDreamWatch{
+        width: 427px;
+        height: 835px;
+        background-color: #f9fafe;
+        position: relative;
+    }
+    
+    #fucher {
+        padding: 40px 20px;
+        position: relative;
+        overflow: hidden;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 89px;
+    }
+    
+    
+
+    #fucher .contaner h1 {
+        width: 297px;
+        height: 22px;
+        font-family: "Space Age", sans-serif;
+        /* font-size: 42px; */
+        margin: 0 auto 40px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 89%;
+        color: #000;
+    }
+    
+    #fucher .imgCenter img {
+        position: absolute;
+        /* left: 50%; */
+        transform: translateX(-50%);
+        top: 100px;
+        width: 632px;
+        height: 629px;
+    }
+    
+    #fucher .contaner .textLeftTop h2,
+    #fucher .contaner .textLeftDown h2,
+    #fucher .contaner .textRightCenter h2 {
+        font-size: 18px;
+        font-family: "PoppinsMedium", sans-serif;
+        margin-bottom: 15px;
+        /* font-weight: 500; */
+        line-height: 67%;
+        text-align: center;
+        color: #000;
+    }
+    
+    #fucher .contaner .textLeftTop {
+        text-align: center;
+        width: 143px;
+        /* height: 174px; */
+        margin-left: 105px;
+        margin-top: 40px;
+        /*margin-top: 100px; */
+        /* position: relative; */
+    }
+    
+    #fucher .contaner .textLeftDown {
+        text-align: center;
+        width: 268px;
+        /* height: 199px; */
+        margin-top: 40px;
+        margin-left: 40px;
+        /* margin-top: 240px;
+        margin-left: 50px; */
+        position: relative;
+    }
+    
+    #fucher .contaner .textRightCenter {
+        text-align: center;
+        width: 254px;
+        /* height: 319px; */
+        position: relative;
+        margin-left: 50px;
+        /* position: absolute; */
+        /* right: 20px;
+        top: 260px; */
+    }
+    
+    #fucher ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-family: "PoppinsRegular", sans-serif;
+        margin-bottom: 15px;
+    }
+    
+    #fucher ul li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    #DesignYourWatchP {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* width: 1440px;
+        height: 506px; */
+        width: 428px;
+        height: 918px;
+        background-color: var(--primary_color);
+        margin-top: 70px;
+    }
+    
+    #DesignYourWatchB {
+        /* width: 1440px;
+        height: 668px; */
+        width: 428px;
+        height: 978px;
+        background-color: black;
+    }
+    
+    
+    #DesignYourWatchP img{
+        margin-left: 171px;
+        margin-right: 171px;
+        margin-top: -10px;
+    }
+    #DesignYourWatchP h1{
+        
+        width: 242px;
+        height: 49px;
+        font-family: "Space Age", sans-serif;
+        text-align: center;
+        font-weight: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 89%;
+        color: #fff;
+    }
+    
+    .rangle {
+        font-family: "Space Age", sans-serif;
+        font-size: 32px;
+        width: 60px;
+        height: 60px;
+        color: white;
+        border: 1px solid white;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rangl {
+        padding: 10px 10px;
+        width: 86px;
+        height: 86px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .squear {
+        border-bottom: 1px solid white;
+        width: 154px;
+        height: 55px;
+        margin-left: -13px;
+        margin-right: -13px;
+        margin-top: -12px;
+    }
+    .elements {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin-top: 61px;
+    } 
+    .textForElements {
+        width: 716px;
+        height: 24px;
+        /* margin-left: 365px;
+        margin-right: 359px;
+        margin-top: 18.45px; */
+        display: flex;
+        gap: 149px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 19px;
+    }
+    
+    .textForElements .text{
+        font-size: 12px;
+        font-family: "PoppinsRegular";
+        color: white;
+        text-align: center;
+    }
+    .baton{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 97.86px;
+        /* margin-top: 78px; */
+    }
+    .design-btnw{
+        font-family: "PoppinsRegular";
+        font-size: 14px;
+        color: white;
+        border: 1px solid black;
+        width: 208px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom: 97.86px; */
+    }
+    #DesignYourWatchMain .ygol img{
+     margin-left: 1340px;
+    
+    }
+    
+    .shape3 {
+        width: 977px;
+        height: 120px;
+        background: var(--primary_color);
+        margin-left: 405px;
+        transform: perspective(120px) rotateX(-15deg);
+    }
+    
+    .shape {
+        width: 977px;
+        height: 110px;
+        background: white;
+        margin-top: 480px ;
+        margin-right: 620px;
+        transform: perspective(120px) rotateX(-15deg);
+        display: none;
+      }
+    .shape1 {
+        margin-top: -566px ;
+        margin-right: 620px;
+        transform: rotate(180deg);
+    }
+    
+    #DesignYourWatchB h1{
+        font-family: "Space Age";
+        color: white;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 71%;
+    }
+    
+    #DesignYourWatchB h3{
+        width: 406px;
+        height: 196px;
+        font-size: 14px;
+        font-family: "PoppinsRegular";
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 240%;
+        text-align: center;
+        color: #dedede;
+        /* margin-top: 37px;
+        margin-right: 260px;
+        margin-left: 676px; */
+    }
+    
+    #DesignYourWatchB .ContanerText{
+        margin-top: 51px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: center;
+        /* align-content: flex-end;
+        margin-right: 260px; */
+    }
+    
+    #DesignYourWatchB .design-btnww{
+        font-family: "PoppinsLight";
+        font-size: 14px;
+        color: white;
+        border: 1px solid var(--primary_color);
+        width: 208px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: var(--primary_color);
+    }
+
+    #DesignYourWatchB .mobil {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    #DesignYourWatchB .imgWoman img {
+        width: 428px;
+        /* height: 574px; */
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -125px;
+    }
+    #watchesSections .textContent {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 78px;
+        /* margin-left: 60px */
+    }
+    
+    #watchesSections .textContent h1 {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 71%;
+        color: #000;
+        width: 174px;
+        height: 19px;
+        font-family: "Space Age", sans-serif;
+        font-weight: normal;
+    }
+    
+    #watchesSections .textContent h3 {
+        margin-top: 37px;
+        font-family: "PoppinsRegular", sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 240%;
+        text-align: center;
+        width: 308px;
+        height: 88px;
+        font-weight: normal;
+        color: #939393;
+    }
+    
+    
+    #watchesSections  .swiper-slide {
+        width: 333px;
+        height: 550px;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        align-items: center;
+        padding-top: 45px;
+        min-width: 100px;
+        transition: opacity 0.5s ease;
+        /* margin-right: 39px; */
+      }
+    
+    #watchesSections .swiper-slide img {
+        border-radius: 10px;
+        display: block;
+        width: 334px;
+        height: 392px;
+        object-fit: cover;
+    }
+    
+    #watchesSections .swiper-wrapper{
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    #watchesSections .swiper-wrapper .text{
+        width: 130px;
+        height: 57.14px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        margin-left: 100px;
+    }
+    
+    #watchesSections .swiper-wrapper .text h2{
+    
+        font-family: "PoppinsRegular";
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 96%;
+        color: #000;
+        margin-top: 23.14px;
+    }
+    
+    #watchesSections .swiper-wrapper .text h3{
+        width: 130px;
+        height: 20px;
+        font-family: "PoppinsRegular";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 75%;
+        color: #939393;
+        margin-top: 26.18px;
+    }
+    
+    
+    .hidden{
+        display: none;
+    }
+    .Arrows{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    
+    .ArrowsLeft{
+        cursor: pointer;
+        
+    }
+    
+    .ArrowsRight{
+        margin-left: 70px;
+        cursor: pointer;
+    }
+    
+    #watchesSections .design-btn{
+        font-family: "PoppinsLight";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 86%;
+        color: #fff;
+        border: 1px solid var(--primary_color);
+        width: 208px;
+        height: 55px;
+        border-radius: 5px;
+        margin-top: 51px;
+        background-color: var(--primary_color);
+        /* margin-left: 604px; */
+    }
+    
+    #AboutUs .MainContent {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 50px;
+        /* margin-top: 225px;
+        margin-left: 100px;
+        width: 1500px;
+        height: 479px; */
+    }
+
+    #AboutUs .MainContent .images img{
+        margin-top: 30px;
+        width: 386px;
+        height: 294px;  
+    }
+    
+    #AboutUs .MainContent .textAndDiscriptions {
+       /* margin-top: 70px; */
+       /* margin-left: 75px; */
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       align-content: center;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+    
+    #AboutUs .MainContent .textAndDiscriptions h1 {
+        width: 188px;
+        height: 22px;
+        font-family: "Space Age";
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 89%;
+        color: #000;
+    }
+    
+    #AboutUs .MainContent .textAndDiscriptions h3 {
+        width: 326px;
+        height: 114px;
+        margin-top: 30px;
+        font-family: "PoppinsRegular";
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 240%;
+        text-align: center;
+        color: #939393;
+        /* margin-top: 47px; */
+    }
+    
+    #Logining {
+        width: 428px;
+        height: 612px;
+        background-image: url("../img/FonMobil.svg");
+        background-repeat: no-repeat;
+    }
+    
+    #Logining .maincontents .TitleAndDiscript {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #Logining .maincontents .WindowLogining .inputs  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #Logining .maincontents .WindowLogining .inputs input {
+        margin: 9.5px;
+        border-radius: 5px;
+        width: 319px;
+        height: 55px;
+        border: 1px solid white;
+        padding-left: 29px;
+        padding-top: 22px ;
+        padding-bottom: 22px ;
+    }
+    
+    #Logining .maincontents .TitleAndDiscript h1{
+        width: 388px;
+        height: 115px;
+        font-family: "PoppinsBold" ;
+        margin-top: 66px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 151%;
+        text-transform: capitalize;
+        text-align: center;
+        color: #fff;
+    }
+    
+    #Logining .maincontents .TitleAndDiscript h3  {
+        width: 388px;
+        height: 40px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        font-family: "PoppinsRegular" ;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 240%;
+        text-align: center;
+        color: #fff;
+    }
+    
+    #Logining .WindowLogining .SignUp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    #Logining .WindowLogining .SignUp .SignUp-btn {
+        font-family: "PoppinsRegular";
+        font-size: 14px;
+        color: white;
+        border: 1px solid black;
+        width: 160px;
+        height: 55px;
+        border-radius: 5px;
+        background-color: black;
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 120%;
+    }
+    
+    #Logining .WindowLogining .comments {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-family: "PoppinsRegular";
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 120%;
+    }
+    
+    footer .maincont {
+        width: 428px;
+        height: 115px;
+        align-items: center;
+        margin-top: 50px;
+    }
+    
+    footer .maincont .ImgFootr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    footer .maincont .textFooter {
+        margin-top: 49px;
+        
+    }
+    
+    footer .maincont .textFooter p{
+        width: 300px;
+        height: 9px;
+        font-family: "PopinsRegular";
+        background-color: #F9FAFE;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 100%;
+        color: #939393;
+        margin-left: 100px;
+        padding-top: 19px;
+        padding-bottom: 29px;
+    }
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        /* 404 */
+
+#Eror {
+    width: 1440px;
+    height: 791px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+}
+
+#Eror .Error {
+    text-align: center;
+    margin-left: -160px;
+}
+
+#Eror .Error h1 {
+    width: 511px;
+    height: 100px;
+    font-family: "Space Age", sans-serif;
+    font-size: 42px;
+    font-weight: normal;
+    margin-left: 150px;
+    line-height: 1.3;
+}
+
+#Eror .ErrorImg404 {
+    font-family: "PoppinsExtraBold";
+    font-size: 272.76px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#Eror .digit-container {
+    position: relative;
+    margin-right: -33px;
+    z-index: 1;
+}
+
+#Eror .digit-container2{
+    position: relative;
+    margin-left: -33px;
+    z-index: 2;
+}
+
+#Eror .first-four {
+    margin: 0;
+    line-height: 1;
+    color: #000;
+    position: relative;
+    z-index: 2;
+}
+
+
+#Eror .imgContainer {
+    position: relative;
+    display: inline-block;
+    margin-left: -20px;
+}
+
+#Eror .imgContainer img {
+    width: 339px;
+    height: 354px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+#Eror .second-four {
+    position: absolute;
+    right: -145px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    line-height: 1;
+    color: #000;
+    z-index: 1;
+}
+
+
